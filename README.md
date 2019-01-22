@@ -1,37 +1,46 @@
-# CPE\_2016\_matchstick
+# ASM\_minilibc\_2017
 
 
 ## Project
-Epitech 1st year project.
+Epitech 2nd year project.
 
-This project is based on a very famous game based on matchsticks.
+This project consists of creating a dynamic ELF library to replace (to a certain extent) the standard.
 
-There is a certain number of matchstick lines.
-The two players take turns; each player can, on a same line, take one or several matchsticks.
+It contains : 
 
-The losing player is the one to take the last matchstick.
+* strlen
+* strchr
+* memset
+* memcpy
+* strcmp
+* memmove
+* strncmp
+* strcasecmp
+* rindex
+* strstr
+* strpbrk
+* strcspn
+
+The language used is *x86-64 Assembly*.
 
 
 
 ## Prerequisites
-There's no prequisites to run the project.
+To compile the library, you'll need **nasm** installed on your machine.
 
 
 
 ## How to use it
-To use this program, you first need to compile it using the Makefile :
+To use this library, you first need to compile it using the Makefile :
     
     make re && make clean
 
-Then, just launch it :
+Then, you compile your program like you would do usually, and finally, you preload the library and launch your binary file :
 
-    ./matchstick [nb of line] [nb of removable matches per turn]
-
-Or use the -h for some informations.
-    
-    ./matchstick -h
+    LD_PRELOAD=./libasm.so ./your_binary [args]
 
 
 
 ## changelog
 * 01/05/19 : added files
+
